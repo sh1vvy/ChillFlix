@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+:root {
+  --primary-color: #000000;
+  --secondary-color: #0e0e11;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+head
+{
+  text-align: center;
+  color:#7378c5
+}
+
+body {
+  background-color: var(--primary-color);
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+}
+
+a
+{
+  text-decoration: none;
+  font-family: Inter;
+  color:red;
+  font-size: 40px;
+}
+
+header {
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  background-color: var(--secondary-color);
+  border-radius: 20px;
+}
+
+h3
+{
+  color:white;
+}
+
+.search {
+  text-align: left;
+  background-color: rgb(75, 71, 63);
+  border: 2px solid var(--primary-color);
+  border-radius: 10px;
+  font-family: Inter;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  color: #fff;
+}
+
+.search::placeholder {
+  color: #c3c7f7;
+}
+
+.wrapper {
+  max-width: auto;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #000000;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.logo
+{
+  text-align: right;
+  font-family: Inter;
+  font-weight: 1000;
+  font-size: 40px;
+  text-decoration: none;
+  color:antiquewhite;
+}
+
+.search:focus {
+  outline: auto;
+  background-color: var(--primary-color);
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.movie {
+  width: 300px;
+  margin: 2rem;
+  background-color: var(--secondary-color);
+  box-shadow: 0 4px 5px rgba(114, 107, 107, 0.2);
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.movie img {
+  width: 100%;
+}
+
+.movie-info {
+  color: #fcb880;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap:0.2rem;
+  padding: 0.5rem 1rem 1rem;
+  letter-spacing: 0.5px;
+}
+
+.movie-info h3 {
+  margin-top: 0;
+}
+
+.movie-info span {
+  background-color: var(--primary-color);
+  padding: 0.25rem 0.5rem;
+  border-radius: 3px;
+  font-weight: bold;
+}
+
+.movie-info span.green {
+  color: lightgreen;
+}
+
+.movie-info span.orange {
+  color: orange;
+}
+
+.movie-info span.red {
+  color: red;
+}
+
+.overview {
+  background-color: #fff;
+  padding: 2rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  max-height: 100%;
+  transform: translateY(101%);
+  overflow-y: auto;
+  transition: transform 0.3s ease-in;
+}
+
+.movie:hover .overview {
+  transform: translateY(0);
+}
